@@ -1,18 +1,24 @@
-{% extends 'base.html' %}
-
-{% block content %}
-
-<div class="content container">
-    <div class="row">
-        <div class="d-flex justify-content-center">>
-            {% for post in posts %}
-                <div class="post">
-                    <h1><a href="{% url 'postdetail' pk=post.pk %}">{{ post.title }}</a></h1>
-                    <p id="ptext">{{ post.text|linebreaksbr }}</p>
-                    <hr>
-                </div>
-            {% endfor %}
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bloggy</title>
+</head>
+<body>
+    <div>
+        <h1><a href="/">Django Girls Blog</a></h1>
     </div>
-</div>
-{% endblock content %}
+
+    <div>
+        <p>published: 14.06.2014, 12:14</p>
+        <h2><a href="">My first post</a></h2>
+        <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+    </div>
+
+    <div>
+        <p>published: 14.06.2014, 12:14</p>
+        <h2><a href="">My second post</a></h2>
+        <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
+    </div>
+</body>
+</html>
