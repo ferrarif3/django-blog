@@ -1,15 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div id="detail">
+    {% if post.published_date %}
+        <p id="ptext">{{post.published_date}}</p>
+    {% endif %}
 
- {% if post.published_date %}
-    <div class="date">
-        {{post.published_date}}
-    </div>
-{% endif %}
+    <h2 id="titleDetail">{{post.title}}</h2>
 
-<h2 id="titleDetail">{{post.title}}</h2>
-
-<p class="textDetail">{{post.text|linebreaksbr}}</p>
-
+    <p class="textDetail">{{post.text|linebreaksbr}}</p>
+</div>
 {% endblock content %}

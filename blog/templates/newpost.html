@@ -1,28 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="newpostwrapper">
-        {% if user.is_authenticated %}
-            <h1 id="newpostt">New post</h1>
+    <div id="newpostdiv">
+        <h1 id="newpostt">New post</h1>
 
-            <form method="POST">{% csrf_token %}
-                <div class="form-group">
-                    {% for field in form %}
-                        <div style="color: #fefee5; font-size: 20px;">
-                            {{ field.label_tag }}
-                            <div style="color: #000;">
-                                {{ field }}
-                            </div>
+        <form method="POST" class="post-form">{% csrf_token %}
+            <div class="form-group">
+                {% for field in form %}
+                    <div class="field" style="color: #fefee5;">
+                        {{ field.label_tag }}
+                        <div style="color: #000;">
+                            {{ field }}
                         </div>
-                        <br>
-                    {% endfor %}
-                    <button type="submit" class="btn btn-outline-light" id="btnlogin">Post</button>
-                </div>
-            </form>
-        {% endif %}
-
-        {% if not user.is_authenticated %}
-            <p style="font-size: 40px;margin-top: 40px;">Please <a href="{% url 'login' %}">log in</a> to post.</p>
-        {% endif %}
+                    </div>
+                    <br>
+                {% endfor %}
+                <button type="submit" class="save btn btn-default">Save</button>
+            </div>
+        </form>
     </div>
 {% endblock content %}
