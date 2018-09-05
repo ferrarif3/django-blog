@@ -1,4 +1,45 @@
 body{
-    background: #000;
-    padding-left: 5%;
+    background: #3d3336;
+    font-family: 'Lato', sans-serif;
+}
+
+#header{
+    background-color: beige;
+    padding-left: 0px;
+    width: 100%;
+    height: 4%;
+}
+
+#title{
+    margin-top: 0px !important;
+    margin-left: 5%;
+    font-size: 44px;
+    color: #3d3336;
+    font-family: 'Lato', sans-serif;
+}
+
+p{
+    color: white;
+}
+
+#ptext{
+    margin-left: 2%;
+}
+
+.date{
+    font-family: 'Lato', sans-serif;
+    color: #fefee5;
+}
+
+#titleDetail{
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+    margin-left: 5%;
+    color: #fefee5;
+}
+
+.textDetail{
+    font-size: 20px;
+    margin-left: 5%;
+    color: #fefee5;
 }
