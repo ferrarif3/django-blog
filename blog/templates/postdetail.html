@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="detail">
+    {% if post.published_date %}
+        <p id="ptext">{{post.published_date}}</p>
+    {% endif %}
+
+    {% if user.is_authenticated %}
+        <a class="btn btn-default" href="{% url 'deletepost' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+    {% endif %}
+
+    <h2 id="titleDetail">{{post.title}}</h2>
+
+    <p class="textDetail">{{post.text|linebreaksbr}}</p>
+</div>
+{% endblock content %}

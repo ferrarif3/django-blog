@@ -1,0 +1,28 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bloggy</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div id="header">
+        <h1 id="title"><a style="color: #3d3336;" href="{% url 'home' %}">Blog</a></h1>
+        {% if user.is_authenticated %}
+            <a href="{% url 'post_new' %}" class="loginb"><span class="glyphicon glyphicon-plus"></span> Add new post</a>
+        {% endif %}
+
+        {% if not user.is_authenticated %}
+            <a href="{% url 'login' %}"><div class="loginb">Log in</div></a>
+        {% endif %}
+    </div>
+
+    {% block content %}
+    {% endblock content %}
+
+</body>
+</html>

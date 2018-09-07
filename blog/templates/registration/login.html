@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <form id="login-form" method="post" action="{% url 'login' %}"> {% csrf_token %}
+                <label for="id_username"">Username:</label>
+                <input id="id_username" name="username" type="text" class="form-control">
+                <label for="id_password">Password:</label>
+                <input id="id_password" name="password" type="password" class="form-control">
+                {% if form.errors %}
+                    <p class="label label-danger">
+                        Your username and password didn't match.
+                        Please try again.
+                    </p>
+                {% endif %}
+                <input type="submit" value="Log in" class="btn btn-outline-light" id="btnlogin"/>
+            </form>
+        </div>
+    </div>
+
+{% endblock content %}
