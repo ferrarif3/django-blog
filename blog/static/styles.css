@@ -18,11 +18,35 @@ body{
 }
 
 #title{
+    display: inline-block;
     margin-top: 0px !important;
     margin-left: 5%;
     font-size: 44px;
     color: #3d3336;
     font-family: 'Lato', sans-serif;
+}
+
+.loginb{
+    font-family:'Lato', sans-serif;
+    height: 40px;
+    float:right;
+    color:#3d3336;
+    font-size:20px;
+    margin-right: 15px;
+    margin-top: 7px;
+    padding: 5px;
+    border: #3d3336 solid 1px;
+    border-radius: 5px;
+}
+
+.loginb:hover {
+    text-decoration: none;
+    color: beige;
+    background-color: #3d3336;
+    border: beige solid 1px;
+    -webkit-transition: border 0.5s;
+    -webkit-transition: background-color 0.5s;
+    -webkit-transition: color 0.5s;
 }
 
 p{
@@ -42,6 +66,9 @@ p{
 #detail{
     margin-top: 40px;
     margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    word-break: break-all;
 }
 
 #titleDetail{
@@ -57,12 +84,35 @@ p{
     color: #fefee5;
 }
 
-#newpostdiv{
-    margin-top: 40px;
-    margin-left: 10%;
+.newpostwrapper{
+    text-align: center;
 }
 
 #newpostt{
     font-family: 'Lato', sans-serif;
     color: #fefee5;
+}
+
+#login-form{
+    font-size: 18px;
+    text-align: center;
+    color: beige;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 20%;
+}
+
+#btnlogin{
+    margin-top: 15px;
+    color: beige;
+    font-size: 18px;
+    background-color: rgba(254, 254, 229, 0);
+    border: beige solid 1px;
+}
+
+#btnlogin:hover{
+    color: #3d3336;
+    background-color: rgba(254, 254, 229, 1);
+    -webkit-transition: color 0.5s;
+    -webkit-transition: background-color 0.5s;
 }

@@ -15,6 +15,10 @@ def postdetail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'postdetail.html', {'post': post})
 
+def deletepost(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    post.delete()
+    return redirect('home')
 
 def newpost(request):
     if request.method == "POST":
