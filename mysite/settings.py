@@ -124,3 +124,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # Login redirect
 
 LOGIN_REDIRECT_URL = '/'
+
+# Media
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

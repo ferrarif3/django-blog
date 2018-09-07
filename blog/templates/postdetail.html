@@ -13,5 +13,9 @@
     <h2 id="titleDetail">{{post.title}}</h2>
 
     <p class="textDetail">{{post.text|linebreaksbr}}</p>
+
+    <p>{{ post.image }}</p>
+
+    <img src="{{ post.image }}" alt="">
 </div>
 {% endblock content %}

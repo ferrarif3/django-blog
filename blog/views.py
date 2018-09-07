@@ -5,9 +5,8 @@ from .forms import PostForm
 
 # Create your views here.
 
-
 def home(request):
-    posts = Post.objects.all()
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     return render(request, 'postlist.html', {'posts': posts})
 
 
@@ -15,10 +14,12 @@ def postdetail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'postdetail.html', {'post': post})
 
+
 def deletepost(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.delete()
     return redirect('home')
+
 
 def newpost(request):
     if request.method == "POST":
