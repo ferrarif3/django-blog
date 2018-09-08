@@ -23,11 +23,12 @@ def deletepost(request, pk):
 
 def newpost(request):
     if request.method == "POST":
-        form = PostForm(request.POST)
+        form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
             post.published_date = timezone.now()
+            post.image = request.FILES['image']
             post.save()
             return redirect('postdetail', pk=post.pk)
     else:

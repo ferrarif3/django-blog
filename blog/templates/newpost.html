@@ -4,7 +4,7 @@
     <div class="newpostwrapper">
         {% if user.is_authenticated %}
             <h1 id="newpostt">New post</h1>
-
+            <br>
             <form method="POST" enctype="multipart/form-data">{% csrf_token %}
                 <div class="form-group">
                     {% for field in form %}
@@ -25,4 +25,12 @@
             <p style="font-size: 40px;margin-top: 40px;">Please <a href="{% url 'login' %}">log in</a> to post.</p>
         {% endif %}
     </div>
+
+    <script>
+        document.getElementById('id_title').style.width = '500px';
+        document.getElementById('id_text').style.width = '500px';
+        document.getElementById('id_image').style.color = 'beige';
+        document.getElementById('id_image').style.width = '300px';
+        document.getElementById('id_image').style.margin = '0 auto';
+    </script>
 {% endblock content %}

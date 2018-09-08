@@ -13,9 +13,22 @@
     <h2 id="titleDetail">{{post.title}}</h2>
 
     <p class="textDetail">{{post.text|linebreaksbr}}</p>
+    {% if post.image %}
+        <div class="container">
+          <div class="panel-group">
+            <div class="panel panel-default" id="imagecollapse">
+                <a data-toggle="collapse" href="#collapse1" id="headerimage">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">Open/hide post image</h4>
+                  </div>
+                </a>
+              <div id="collapse1" class="panel-collapse collapse">
+                <div class="panel-body"><img src="http://localhost:8000/media/images/{{ post.image }}/" alt="" id="imagepost"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+    {% endif %}
 
-    <p>{{ post.image }}</p>
-
-    <img src="{{ post.image }}" alt="">
 </div>
 {% endblock content %}

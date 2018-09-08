@@ -39,6 +39,13 @@ body{
   border-top: 4px solid #3d3336;
 }
 
+#containsimage{
+    color: beige;
+    display: inline-block;
+    font-size: 30px;
+    margin-right: 20px;
+}
+
 .loginb{
     font-family:'Lato', sans-serif;
     height: 40px;
@@ -62,8 +69,17 @@ body{
     -webkit-transition: color 0.5s;
 }
 
+.loginb:focus {
+    text-decoration: none;
+    color:#3d3336;
+}
+
 p{
     color: #fefee5;
+    word-wrap:break-word;
+}
+
+#ptitle{
     word-wrap:break-word;
 }
 
@@ -99,6 +115,44 @@ p{
     margin-left: 5%;
     color: #fefee5;
     word-wrap:break-word;
+}
+
+#imagepost{
+    display: flex;
+    width: 50%;
+    margin: 60 auto;
+}
+
+#headerimage{
+    text-decoration: none;
+    color: #3d3336;
+    text-align: center;
+}
+
+#collapse1{
+    background-color: #3d3336;
+}
+
+#imagecollapse{
+    margin-top: 15px;
+    color: beige;
+    font-size: 18px;
+    background-color: rgba(254, 254, 229, 1);
+    border: beige solid 1px;
+}
+
+#imagecollapse:hover{
+    color: #3d3336;
+    background-color: rgba(254, 254, 229, 1);
+    -webkit-transition: color 0.5s;
+    -webkit-transition: background-color 0.5s;
+}
+
+#imagecollapse:focus{
+    color: #3d3336;
+    background-color: rgba(254, 254, 229, 1);
+    -webkit-transition: color 0.5s;
+    -webkit-transition: background-color 0.5s;
 }
 
 .newpostwrapper{

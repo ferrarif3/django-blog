@@ -9,4 +9,4 @@ urlpatterns = [
     path('post/delete/<int:pk>/', views.deletepost, name='deletepost'),
     path('post/new/', views.newpost, name='post_new'),
     path('accounts/', include('django.contrib.auth.urls')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_URL)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
